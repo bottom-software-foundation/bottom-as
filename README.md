@@ -15,31 +15,31 @@ Particularly for the encode function, the library does several raw memory operat
 ```
 100 encodes:
 ------------
-bottom-as: 0.91 ms
-bottom-js: 3.98 ms
+bottom-as: 0.59 ms
+bottom-js: 4.89 ms
 
 50000 encodes:
 ------------
-bottom-as: 324.50 ms
-bottom-js: 1931.11 ms
+bottom-as: 300.38 ms
+bottom-js: 1828.18 ms
 
 200000 encodes:
 ------------
-bottom-as: 1342.78 ms
-bottom-js: 6928.79 ms
+bottom-as: 1229.01 ms
+bottom-js: 7177.28 ms
 
 100 decodes:
 ------------
-bottom-as: 2.90 ms
-bottom-js: 5.03 ms
+bottom-as: 2.07 ms
+bottom-js: 5.47 ms
 
 50000 decodes:
 ------------
-bottom-as: 1399.36 ms
-bottom-js: 2146.35 ms
+bottom-as: 1058.83 ms
+bottom-js: 2530.29 ms
 
 200000 decodes:
 ------------
-bottom-as: 5473.01 ms
-bottom-js: 8820.66 ms
+bottom-as: 4727.13 ms
+bottom-js: 9132.84 ms
 ```

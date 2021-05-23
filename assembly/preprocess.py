@@ -34,14 +34,14 @@ export const valueToChar: Map<u8, string> = new Map();
 
 
 def get_length(s):
-    return len(s.encode("utf-16")) - 2
+    return len((s + SECTION_SEPERATOR).encode("utf-16")) - 2
 
 
 path = (Path(__file__).parent / "macro.ts").resolve()
 with open(path, "w+", encoding="utf-8") as outf:
     outf.write(header)
 
-    first = CHARACTER_VALUES[0] + SECTION_SEPERATOR
+    first = CHARACTER_VALUES[0]
     bottomLookup = [f'"{first}"']
     bottomLookupLength = [get_length(first)]
 
@@ -56,7 +56,6 @@ with open(path, "w+", encoding="utf-8") as outf:
                     out += emoji
                     break
 
-        out += SECTION_SEPERATOR
         bottomLookup.append(f'"{out}"')
         bottomLookupLength.append(get_length(out))
 

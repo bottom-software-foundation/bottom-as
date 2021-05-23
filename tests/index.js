@@ -15,6 +15,7 @@ const tests = [
 
 tests.forEach(([decoded, encoded]) => {
 	assert.strictEqual(bottom.encode(decoded), encoded);
+	assert.strictEqual(bottom.decode(encoded), decoded);
 });
 
 console.log("ok");

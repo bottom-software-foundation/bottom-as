@@ -1,0 +1,21 @@
+{
+	"name": "bottom-as",
+	"version": "0.0.1",
+	"description": "An implementation of bottom in AssemblyScript.",
+	"main": "index.js",
+	"scripts": {
+		"test": "node tests",
+		"asbuild:untouched": "asc assembly/index.ts --target debug --exportRuntime --transform as-bind",
+		"asbuild:optimized": "asc assembly/index.ts --target release --exportRuntime --transform as-bind",
+		"asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+	},
+	"author": "romdotdog",
+	"license": "MIT",
+	"dependencies": {
+		"@assemblyscript/loader": "^0.18.32",
+		"as-bind": "^0.7.0"
+	},
+	"devDependencies": {
+		"assemblyscript": "^0.18.32"
+	}
+}

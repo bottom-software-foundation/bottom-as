@@ -12,7 +12,8 @@
 	"author": "romdotdog",
 	"license": "MIT",
 	"dependencies": {
-		"@assemblyscript/loader": "^0.18.32"
+		"@assemblyscript/loader": "^0.18.32",
+		"bottomify": "^0.3.0"
 	},
 	"devDependencies": {
 		"assemblyscript": "^0.18.32"

@@ -2,7 +2,7 @@ const fs = require("fs");
 const loader = require("@assemblyscript/loader");
 
 const wasmModule = loader.instantiateSync(
-	fs.readFileSync(__dirname + "/build/untouched.wasm")
+	fs.readFileSync(__dirname + "/build/optimized.wasm")
 );
 
 const { encode, decode, __newString, __getString } = wasmModule.exports;

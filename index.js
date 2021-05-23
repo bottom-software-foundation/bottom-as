@@ -1,8 +1,13 @@
 const fs = require("fs");
-const AsBind = require("as-bind/dist/as-bind.cjs");
+const loader = require("@assemblyscript/loader");
 
-const wasmModule = AsBind.instantiateSync(
+const wasmModule = loader.instantiateSync(
 	fs.readFileSync(__dirname + "/build/untouched.wasm")
 );
 
-module.exports = wasmModule.exports;
+const { encode, decode, __newString, __getString } = wasmModule.exports;
+
+module.exports = {
+	encode: (s) => __getString(encode(__newString(s))),
+	decode: (s) => __getString(decode(__newString(s)))
+};
